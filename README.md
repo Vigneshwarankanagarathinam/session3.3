@@ -11,7 +11,6 @@ There are two major categories of HDFS namely,
   HIGH AVAILABILITY:
       In Hadoop 1.x, the NameNode was a single point of failure (SPOF) in an HDFS cluster. Each cluster had a single NameNode, and if that machine or process became unavailable, the cluster as a whole would be unavailable.
       But in a typical HA cluster of Hadoop 2.x, two separate machines are configured as NameNodes. At any point in time, exactly one of the NameNodes is in an Active state, and the other is in a Standby state. The Active NameNode is responsible for all client operations in the cluster, while the Standby simply acts as a slave, maintaining enough state to provide a fast failover if necessary.
-
         1) Hadoop 2.x supports two Name Nodes at a time one node is active and another is standby namenode
         2) Active Name Node handles the client operations in the cluster
         3) Standby Name Node manages metadata same as Secondary Name Node in Hadoop 1.x
